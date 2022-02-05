@@ -45,9 +45,9 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
                 [[
                   InlineKeyboardButton("Hᴇʟᴘ", callback_data="start"),
-                  InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="start")
+                  InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
                 ],[
-                  InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")
+                  InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
                 ]]
           )
       )
@@ -62,7 +62,7 @@ async def callback(bot, update):
           InlineKeyboardButton("Hᴇʟᴘ", callback_data="start"),
           InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
        ],[
-          InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")
+          InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
         ]]
         )
       )
