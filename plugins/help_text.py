@@ -44,10 +44,10 @@ async def start(bot, update):
         text=Translation.START_TEXT.format(update.from_user.mention),
         reply_markup=InlineKeyboardMarkup(
                 [[
-                  InlineKeyboardButton("Hᴇʟᴘ", ),
-                  InlineKeyboardButton("Aʙᴏᴜᴛ", )
+                  InlineKeyboardButton("Hᴇʟᴘ", callback_data"start"),
+                  InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data"start")
                 ],[
-                  InlineKeyboardButton("Cʟᴏsᴇ", )
+                  InlineKeyboardButton("Cʟᴏsᴇ", callback_data"start")
                 ]]
           )
       )
@@ -58,10 +58,12 @@ async def callback(bot, update):
     await update.message.edit(
       text=Translation.HELP_USER,
       reply_markup=InlineKeyboardMarkup(
-        [[InlineKeyboardButton("Hᴇʟᴘ", ),
-          InlineKeyboardButton("Aʙᴏᴜᴛ", )
-          ],[
-          InlineKeyboardButton("Cʟᴏsᴇ", )]]
+        [[
+          InlineKeyboardButton("Hᴇʟᴘ", callback_data"start"),
+          InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data"about")
+       ],[
+          InlineKeyboardButton("Cʟᴏsᴇ", callback_data"start")
+        ]]
         )
       )
           
