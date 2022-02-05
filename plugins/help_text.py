@@ -84,7 +84,7 @@ async def callback(bot, update):
 
   elif update.data == "about":
     await update.message.edit(
-      text=Translation.HELP_USER,
+      text=Translation.ABOUT_TEXT,
       reply_markup=InlineKeyboardMarkup(
         [[
           InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
