@@ -52,9 +52,6 @@ async def start(bot, update):
           )
       )
 
-
-
-
 @Clinton.on_callback_query()
 async def callback(bot: Clinton, update: CallbackQuery):
     if update.data == "start":
@@ -69,8 +66,6 @@ async def callback(bot: Clinton, update: CallbackQuery):
                 ]]
               )
           )
-
-
 
     elif update.data == "help":
         await update.message.edit(
