@@ -54,23 +54,23 @@ async def start(bot, update):
 
 @Clinton.on_callback_query()
 async def callback(bot, update):
-  if update.data == "start":
-    await update.message.edit(
-      text=Translation.START_TEXT,
-      reply_markup=InlineKeyboardMarkup(
-        [[
-          InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
-          InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
-       ],[
-          InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
-        ]]
+    if update.data == "start":
+        await update.message.edit(
+            text=Translation.START_TEXT,
+            reply_markup=InlineKeyboardMarkup(
+                    [[
+                      InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
+                      InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
+                    ],[
+                      InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
+                    ]]
         )
       )
     
   elif update.data == "help":
-    await update.message.edit(
-      text=Translation.HELP_USER,
-      reply_markup=InlineKeyboardMarkup(
+        await update.message.edit(
+            text=Translation.HELP_USER,
+            reply_markup=InlineKeyboardMarkup(
         [[
           InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
           InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
@@ -83,9 +83,9 @@ async def callback(bot, update):
       )
 
   elif update.data == "about":
-    await update.message.edit(
-      text=Translation.ABOUT_TEXT,
-      reply_markup=InlineKeyboardMarkup(
+     await update.message.edit(
+         text=Translation.ABOUT_TEXT,
+         reply_markup=InlineKeyboardMarkup(
         [[
           InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
           InlineKeyboardButton("Hᴇʟᴘ", callback_data="help")
