@@ -19,7 +19,7 @@ from database.adduser import AddUser
 from pyrogram import Client as Clinton
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 @Clinton.on_message(filters.private & filters.command(["help"]))
@@ -34,13 +34,14 @@ async def help_user(bot, update):
         reply_to_message_id=update.message_id
     )
 
+
 @Clinton.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     # logger.info(update)
     await AddUser(bot, update)
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.HELP_USER,
+        text=Translation.START_TEXT.format(update.from_user.mention),
         reply_markup=InlineKeyboardMarkup(
                 [[
                   InlineKeyboardButton("Hᴇʟᴘ", ),
@@ -48,8 +49,9 @@ async def start(bot, update):
                 ],[
                   InlineKeyboardButton("Cʟᴏsᴇ", )
                 ]]
-           )
+        )
     )
+
 
 @Clinton.on_callback_query()
 async def callback(bot: Clinton, update: CallbackQuery):
