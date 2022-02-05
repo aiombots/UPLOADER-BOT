@@ -70,13 +70,12 @@ async def callback(bot, update):
     elif update.data == "help":
           await update.message.edit(
               text=Translation.HELP_USER,
-              reply_markup=InlineKeyboardMarkup(
-        [[
+              reply_markup=InlineKeyboardMarkup( [[
           InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
           InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
-       ],[
+          ],[
           InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
-        ]]
+          ]]
 
         )
 
@@ -85,13 +84,12 @@ async def callback(bot, update):
     elif update.data == "about":
        await update.message.edit(
            text=Translation.ABOUT_TEXT,
-           reply_markup=InlineKeyboardMarkup(
-        [[
+           reply_markup=InlineKeyboardMarkup( [[
           InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
           InlineKeyboardButton("Hᴇʟᴘ", callback_data="help")
-       ],[
+          ],[
           InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
-        ]]
+          ]]
 
         )
 
