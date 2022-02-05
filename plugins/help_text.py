@@ -52,3 +52,16 @@ async def start(bot, update):
           )
       )
 
+@Clinton.on_callback_query()
+async def callback(bot, update):
+  if update.data == "start":
+    await update.message.edit(
+      text=Translation.HELP_USER,
+      reply_markup=InlineKeyboardMarkup(
+        [[InlineKeyboardButton("Hᴇʟᴘ", ),
+          InlineKeyboardButton("Aʙᴏᴜᴛ", )
+          ],[
+          InlineKeyboardButton("Cʟᴏsᴇ", )]]
+        )
+      )
+          
