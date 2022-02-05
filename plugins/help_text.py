@@ -44,10 +44,10 @@ async def start(bot, update):
         text=Translation.START_TEXT.format(update.from_user.mention),
         reply_markup=InlineKeyboardMarkup(
                 [[
-                  InlineKeyboardButton("", ),
-                  InlineKeyboardButton("", )
+                  InlineKeyboardButton("Hᴇʟᴘ", ),
+                  InlineKeyboardButton("Aʙᴏᴜᴛ", )
                 ],[
-                  InlineKeyboardButton("", )
+                  InlineKeyboardButton("Cʟᴏsᴇ", )
                 ]]
           )
 
@@ -58,10 +58,36 @@ async def callback(bot: Clinton, update: CallbackQuery):
             text=Translation.START_TEXT.format(update.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
                 [[
-                  InlineKeyboardButton("", ),
-                  InlineKeyboardButton("", )
+                  InlineKeyboardButton("Hᴇʟᴘ", ),
+                  InlineKeyboardButton("Aʙᴏᴜᴛ", )
                 ],[
-                  InlineKeyboardButton("", )
+                  InlineKeyboardButton("Cʟᴏsᴇ", )
                 ]]
         )
-        )    
+        )
+
+    elif update.data == "help":
+        await update.message.edit(
+            text=Translation.HELP_USER,
+            reply_markup=InlineKeyboardMarkup(
+                [[
+                  InlineKeyboardButton("Hᴏᴍᴇ", ),
+                  InlineKeyboardButton("Aʙᴏᴜᴛ", )
+                ],[
+                  InlineKeyboardButton("Cʟᴏsᴇ", )
+                ]]
+        )
+        )
+
+    elif update.data == "about":
+        await update.message.edit(
+            text=Translation.ABOUT_TEXT,
+            reply_markup=InlineKeyboardMarkup(
+                [[
+                  InlineKeyboardButton("Hᴏᴍᴇ", ),
+                  InlineKeyboardButton("Aʙᴏᴜᴛ", )
+                ],[
+                  InlineKeyboardButton("Cʟᴏsᴇ", )
+                ]]
+        )
+        )
