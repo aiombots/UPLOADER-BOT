@@ -49,6 +49,7 @@ async def start(bot, update):
                 ],[
                   InlineKeyboardButton("", )
                 ]]
+          )
 
 @Clinton.on_callback_query()
 async def callback(bot: Clinton, update: CallbackQuery):
