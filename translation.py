@@ -39,5 +39,22 @@ You can use /rename command after receiving file to rename it with custom thumbn
     ZIP_UPLOADED_STR = "Uploaded {} files in {} seconds"
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     ABOUT_TEXT = """
-
+╭──────[ Aʙᴏᴜᴛ Mᴇ ]────⍟
+│
+├ Mʏ ɴᴀᴍᴇ : <a href="https://t.me/AIOM_URL_UPLOADER_BOT">Uᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ</a>
+│
+├ Cʜᴀɴɴᴇʟ : <a href="https://t.me/AIOM_BOTS">ƛƖƠM ƁƠƬƧ</a>
+│
+├ Vᴇʀꜱɪᴏɴ : 2.2.0 Bᴇᴛᴀ
+│
+├ Sᴇʀᴠᴇʀ : <a href="https://www.heroku.com">Hᴇʀᴏᴋᴜ</a>
+│
+├ Lᴀɴɢᴜᴀɢᴇ : Pʏᴛʜᴏɴ 3.9.7
+│
+├ Fʀᴀᴍᴇᴡᴏʀᴋ : Pʏʀᴏɢʀᴀᴍ 1.2.9
+│
+├ Pᴏᴡᴇʀᴇᴅ ʙʏ : <a href="https://t.me/AIOM_BOTS">ƛƖƠM ƁƠƬƧ</a>
+│
+├ Uᴘᴅᴀᴛᴇᴅ ᴏɴ : [ 5.2.2022 ] │8:56 PM
+╰─────────────────⍟
 """
