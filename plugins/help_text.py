@@ -54,6 +54,23 @@ async def start(bot, update):
         reply_to_message_id=update.message_id
    )
 
+@Clinton.on_message(filters.command('about') & filters.private)
+def start(bot, message):
+   text=
+   reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
+   message.replay(
+        text=Translation.ABOUT_TEXT
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Help", callback_data="help"),
+                    InlineKeyboardButton("About", callback_data="about"),
+                ],
+                [   InlineKeyboardButton("Close", callback_data="start")],
+            ]
+        )
+)
+
 @Clinton.on_callback_query()
 async def callback(bot, msg):
     if msg.data == "start":
