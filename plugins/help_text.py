@@ -54,11 +54,9 @@ async def start(bot, update):
         reply_to_message_id=update.message_id
    )
 
-@Clinton.on_message(filters.command('about') & filters.private)
-def start(bot, message):
-   text=
-   reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
-   message.replay(
+@Clinton.on_message(filters.private & filters.command(["about"]))
+async def start(bot, update):
+    await bot.send_message(
         text=Translation.ABOUT_TEXT
         reply_markup=InlineKeyboardMarkup(
             [
@@ -69,7 +67,7 @@ def start(bot, message):
                 [   InlineKeyboardButton("Close", callback_data="start")],
             ]
         )
-)
+   )
 
 @Clinton.on_callback_query()
 async def callback(bot, msg):
