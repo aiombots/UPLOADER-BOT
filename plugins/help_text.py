@@ -54,17 +54,4 @@ async def start(bot, update):
         reply_to_message_id=update.message_id
    )
 
-@Clinton.on_callback_query()
-async def callback(bot, msg):
-    if msg.data == "start":
-        await msg.message.edit(
-            text=Translation.START_TEXT.format(update.from_user.mention)
-        )
-    elif msg.data == "help":
-        await msg.message.edit(
-            text="working"
-        )
-    elif msg.data == "about":
-        await msg.message.edit(
-            text=Translation.ABOUT_TEXT
-        )
+
