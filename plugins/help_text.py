@@ -48,7 +48,7 @@ async def start(bot, update):
                     InlineKeyboardButton("Help", callback_data="help"),
                     InlineKeyboardButton("About", callback_data="about"),
                 ],
-                [   InlineKeyboardButton("Close", callback_data="start")],
+                [   InlineKeyboardButton("Close", callback_data="close")],
             ]
         ),
         reply_to_message_id=update.message_id
@@ -60,14 +60,18 @@ async def callback(bot, update):
         await update.message.edit(
             text=Translation.START_TEXT.format(update.from_user.mention)
         )
-  
+   
     elif update.data == "help":
           await update.message.edit(
               text=Translation.HELP_USER
           )
-
     elif update.data == "about":
           await update.message.edit(
               text=Translation.ABOUT_TEXT
           )
+
+@Clinton.on_callback_query(filters.regex('^close$'))
+async def close_cb(c, m):
+    await m.message.delete()
+    await m.message.reply_to_message.delete()
 
