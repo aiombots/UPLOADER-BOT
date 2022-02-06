@@ -75,7 +75,7 @@ async def close_cb(c, m):
     await m.message.delete()
     await m.message.reply_to_message.delete()
 
-@RenamerNs.on_callback_query(filters.regex('^donate$'))
+@Clinton.on_callback_query(filters.regex('^donate$'))
 async def donate(c, m):
     button = [[
         InlineKeyboardButton('Home', callback_data='back'),
