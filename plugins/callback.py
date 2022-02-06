@@ -26,7 +26,7 @@ Pᴏᴡᴇʀᴇᴅ ʙʏ : @AIOM_BOTS""",
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Hᴇʟᴘ", callback_data="start"),
+                    InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
                     InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
                 ],
                 [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")],
@@ -54,7 +54,7 @@ Pᴏᴡᴇʀᴇᴅ ʙʏ : @AIOM_BOTS""",
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Hᴏᴍᴇ", callback_data="help"),
+                    InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
                     InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
                 ],
                 [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")],
