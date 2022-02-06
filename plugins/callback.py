@@ -31,7 +31,7 @@ async def callback(bot, msg):
             [
                 [
                     InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
-                    InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
+                    InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
                 ],
                 [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
             ]
