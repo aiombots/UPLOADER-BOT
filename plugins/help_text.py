@@ -37,7 +37,6 @@ async def help_user(bot, update):
                 [   InlineKeyboardButton("Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/aiombots/UPLOADER-BOT")],
             ]
         ),
-        reply_to_message_id=update.message_id,
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
