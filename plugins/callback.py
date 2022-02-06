@@ -6,20 +6,48 @@ from pyrogram import filters
 from pyrogram import Client as Clinton
 from plugins.youtube_dl_button import youtube_dl_call_back
 from plugins.dl_button import ddl_call_back
+from translation import Translation
 
 @Clinton.on_callback_query()
 async def callback(bot, msg):
     if msg.data == "start":
         await msg.message.edit(
-            text=Translation.START_TEXT.format(update.from_user.mention)
+            text=Translation.START_TEXT.format(update.from_user.mention),
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Hᴇʟᴘ", callback_data="start"),
+                    InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
+                ],
+                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
+            ]
+        )
         )
     elif msg.data == "help":
         await msg.message.edit(
-            text="working"
+            text=Translation.HELP_USER,
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
+                    InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
+                ],
+                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
+            ]
+        )
         )
     elif msg.data == "about":
         await msg.message.edit(
-            text=Translation.ABOUT_TEXT
+            text=Translation.ABOUT_TEXT,
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Hᴏᴍᴇ", callback_data="help"),
+                    InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
+                ],
+                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
+            ]
+        )
         )
 
 @Clinton.on_callback_query(filters.regex('^X0$'))
