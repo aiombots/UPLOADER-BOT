@@ -45,10 +45,10 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Help", callback_data="help"),
-                    InlineKeyboardButton("About", callback_data="about"),
+                    InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
+                    InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
                 ],
-                [   InlineKeyboardButton("Close", callback_data="start")],
+                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
             ]
         ),
         reply_to_message_id=update.message_id
