@@ -67,8 +67,7 @@ async def callback(bot, update):
           )
 
     elif update.data == "about":
-       await update.message.edit(
-           text=Translation.ABOUT_TEXT
-        
-      )
+          await update.message.edit(
+              text=Translation.ABOUT_TEXT
+          )
 
