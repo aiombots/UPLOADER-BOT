@@ -62,7 +62,7 @@ async def callback(bot, msg):
         )
     elif msg.data == "help":
         await msg.message.edit(
-            text=Translation.HELP_USER
+            text="working"
         )
     elif msg.data == "about":
         await msg.message.edit(
