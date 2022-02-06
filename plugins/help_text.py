@@ -41,57 +41,24 @@ async def start(bot, update):
     await AddUser(bot, update)
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(update.from_user.mention),
-        reply_markup=InlineKeyboardMarkup(
-                [[
-                  InlineKeyboardButton("Hᴇʟᴘ", callback_data="start"),
-                  InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
-                ],[
-                  InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
-                ]]
-          )
-      )
+        text=Translation.START_TEXT.format(update.from_user.mention)
+   )
 
 @Clinton.on_callback_query()
 async def callback(bot, update):
     if update.data == "start":
         await update.message.edit(
-            text=Translation.START_TEXT,
-            reply_markup=InlineKeyboardMarkup(
-                    [[
-                      InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
-                      InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
-                    ],[
-                      InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
-                    ]]
+            text=Translation.START_TEXT.format(update.from_user.mention)
         )
-      )
   
     elif update.data == "help":
           await update.message.edit(
-              text=Translation.HELP_USER,
-              reply_markup=InlineKeyboardMarkup( [[
-          InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
-          InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
-          ],[
-          InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
-          ]]
-
-        )
-
-      )
+              text=Translation.HELP_USER
+          )
 
     elif update.data == "about":
        await update.message.edit(
-           text=Translation.ABOUT_TEXT,
-           reply_markup=InlineKeyboardMarkup( [[
-          InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
-          InlineKeyboardButton("Hᴇʟᴘ", callback_data="help")
-          ],[
-          InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
-          ]]
-
-        )
-
+           text=Translation.ABOUT_TEXT
+        
       )
 
