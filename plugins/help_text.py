@@ -61,10 +61,10 @@ async def callback(bot, msg):
             text=Translation.START_TEXT.format(update.from_user.mention)
         )
     elif msg.data == "help":
-          await msg.message.edit(
-              text=Translation.HELP_USER
-          )
+        await msg.message.edit(
+            text=Translation.HELP_USER
+        )
     elif msg.data == "about":
-          await msg.message.edit(
-              text=Translation.ABOUT_TEXT
-          )
+        await msg.message.edit(
+            text=Translation.ABOUT_TEXT
+        )
