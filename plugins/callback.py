@@ -61,17 +61,17 @@ Pᴏᴡᴇʀᴇᴅ ʙʏ : @AIOM_BOTS""",
             ]
         )
         )
-
+ 
 @Clinton.on_callback_query(filters.regex('^X0$'))
-async def delt(bot, update):
-          await update.message.delete(True)
+async def delt(bot, msg):
+          await msg.message.delete(True)
 
 
 @Clinton.on_callback_query()
-async def button(bot, update):
+async def button(bot, msg):
 
-    cb_data = update.data
+    cb_data = msg.data
     if "|" in cb_data:
-        await youtube_dl_call_back(bot, update)
+        await youtube_dl_call_back(bot, msg)
     elif "=" in cb_data:
-        await ddl_call_back(bot, update)
+        await ddl_call_back(bot, msg)
