@@ -69,25 +69,3 @@ async def callback(bot, update):
           await update.message.edit(
               text=Translation.ABOUT_TEXT
           )
-
-@Clinton.on_callback_query(filters.regex('^close$'))
-async def close_cb(c, m):
-    await m.message.delete()
-    await m.message.reply_to_message.delete()
-
-@Clinton.on_callback_query(filters.regex('^donate$'))
-async def donate(c, m):
-    button = [[
-        InlineKeyboardButton('Home', callback_data='back'),
-        InlineKeyboardButton('About', callback_data='about')
-        ],[
-        InlineKeyboardButton('Close', callback_data='close')
-    ]]
-    reply_markup = InlineKeyboardMarkup(button)
-    await m.answer()
-    await m.message.edit(
-        text=Translation.HELP_USER,
-        disable_web_page_preview=True,
-        reply_markup=reply_markup
-    )
-
