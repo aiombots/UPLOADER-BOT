@@ -20,17 +20,36 @@ URL | filename | username | password"""
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     CUSTOM_CAPTION_UL_FILE = "{}"
     NO_VOID_FORMAT_FOUND = "ERROR...\n<b>YouTubeDL</b> said: {}"
-    HELP_USER = """How to Use Me? Follow These steps!
-    
-1. Send url (example.domain/File.mp4 | New Filename.mp4).
-2. Send Image As Custom Thumbnail (Optional).
-3. Select the button.
-   SVideo - Give File as video with Screenshots
-   DFile  - Give File (video) as file with Screenshots
-   Video  - Give File as video without Screenshots
-   File   - Give File without Screenshots
-
-If bot didn't respond, contact @Sources_Codes"""
+    HELP_USER = """╭──────[ Hᴇʟᴩ  ]───────⍟
+│
+├ Sᴇɴᴅ ᴘʜᴏᴛᴏ ᴛᴏ ᴍᴀᴋᴇ ɪᴛ ᴀꜱ │ᴛʜᴜᴍʙɴᴀɪʟ ( ᴏᴘᴛɪᴏɴᴀʟ )
+│
+├Dᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ /│dthumbnail ᴄᴏᴍᴍᴀɴᴅ
+│
+├Vɪᴇᴡ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ /│sthumbnail ᴄᴏᴍᴍᴀɴᴅ
+│
+├ Mediafire.com Links Dupport
+│
+├ Mega.nz Shared Files Links
+│
+├YouTube Video/Shorts Links
+│
+├ Zee5 Non-drm Links Support
+│
+├ Voot Non-drm Links Support
+│
+├ Mxplayer Non-drm Links │Support
+│
+├ Sony.live Non-drm Links │Support
+│
+├ Google Drive Shared Links │Support
+│
+├ Google & Mega Drive Folder │Not Support ⛔
+│
+├ Download Insta Profile With │@username
+│
+│Cᴏɴᴛᴀᴄᴛ Dᴇᴠᴇʟᴏᴘᴇʀ (ᴏʀ) │Rᴇᴘᴏʀᴛ Bᴜɢꜱ : <a href="https://t.me/ajvadntr2">[ ᴄʟɪᴄᴋ ʜᴇʀᴇ ]</a>
+╰─────────────────⍟"""
     REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "Reply /generatecustomthumbnail to a media album, to generate custom thumbail"
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = """Media Album should contain only two photos. Please re-send the media album, and then try again, or send only two photos in an album."
 You can use /rename command after receiving file to rename it with custom thumbnail support.
@@ -56,5 +75,4 @@ You can use /rename command after receiving file to rename it with custom thumbn
 ├ Pᴏᴡᴇʀᴇᴅ ʙʏ : <a href="https://t.me/AIOM_BOTS">ƛƖƠM ƁƠƬƧ</a>
 │
 ├ Uᴘᴅᴀᴛᴇᴅ ᴏɴ : [ 5.2.2022 ] │8:56 PM
-╰─────────────────⍟
-"""
+╰─────────────────⍟"""
