@@ -46,7 +46,7 @@ async def start(bot, update):
             [
                 [
                     InlineKeyboardButton("Help", callback_data="help"),
-                    InlineKeyboardButton("About", callback_data="about"),
+                    InlineKeyboardButton("About", callback_data="donate"),
                 ],
                 [   InlineKeyboardButton("Close", callback_data="close")],
             ]
@@ -74,4 +74,20 @@ async def callback(bot, update):
 async def close_cb(c, m):
     await m.message.delete()
     await m.message.reply_to_message.delete()
+
+@RenamerNs.on_callback_query(filters.regex('^donate$'))
+async def donate(c, m):
+    button = [[
+        InlineKeyboardButton('Home', callback_data='back'),
+        InlineKeyboardButton('About', callback_data='about')
+        ],[
+        InlineKeyboardButton('Close', callback_data='close')
+    ]]
+    reply_markup = InlineKeyboardMarkup(button)
+    await m.answer()
+    await m.message.edit(
+        text=Translation.HELP_USER,
+        disable_web_page_preview=True,
+        reply_markup=reply_markup
+    )
 
