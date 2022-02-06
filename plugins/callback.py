@@ -23,19 +23,3 @@ async def button(bot, update):
         await youtube_dl_call_back(bot, update)
     elif "=" in cb_data:
         await ddl_call_back(bot, update)
-
-@Clinton.on_callback_query(filters.regex('^start$'))
-async def callback(bot, update):
-          await update.message.edit(
-              text="working"
-          )
-
-@Clinton.on_callback_query(filters.regex('^help$'))
-async def callback(bot, update):
-          await update.message.edit(
-              text="working"
-          ) 
-     
-                 
-
-
