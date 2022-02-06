@@ -57,6 +57,7 @@ async def start(bot, update):
 @Clinton.on_message(filters.private & filters.command(["about"]))
 async def start(bot, update):
     await bot.send_message(
+        chat_id=update.chat.id,
         text=Translation.ABOUT_TEXT,
         reply_markup=InlineKeyboardMarkup(
             [
