@@ -68,7 +68,7 @@ Pᴏᴡᴇʀᴇᴅ ʙʏ : @AIOM_BOTS""",
     elif msg.data == "close":
         await msg.message.delete(True)
 
-    elif cb_data = msg.data
+    elif cb_data == msg.data
     if "|" in cb_data:
         await youtube_dl_call_back(bot, msg)
     elif "=" in cb_data:
