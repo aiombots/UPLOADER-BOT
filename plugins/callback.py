@@ -36,6 +36,7 @@ Pᴏᴡᴇʀᴇᴅ ʙʏ : @AIOM_BOTS""",
     elif msg.data == "help":
         await msg.message.edit(
             text=Translation.HELP_USER,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -49,6 +50,7 @@ Pᴏᴡᴇʀᴇᴅ ʙʏ : @AIOM_BOTS""",
     elif msg.data == "about":
         await msg.message.edit(
             text=Translation.ABOUT_TEXT,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
             [
                 [
