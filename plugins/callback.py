@@ -13,7 +13,11 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 async def callback(bot, msg):
     if msg.data == "start":
         await msg.message.edit(
-            text=Translation.START_TEXT.format(update.from_user.mention),
+            text=f"""Hᴇʟʟᴏ 👋 , {update.from_user.mention} ♡
+Tʜɪꜱ Iꜱ A Pᴏᴡᴇʀꜰᴜʟ Uʀʟ Uᴘʟᴏᴀᴅᴇʀ Bᴏᴛ.
+Yᴏᴜ Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs/Vɪᴅᴇᴏ Fʀᴏᴍ Dɪʀᴇᴄᴛ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ
+Cʟɪᴄᴋ Oɴ Hᴇʟᴩ Bᴜᴛᴛᴏɴ Fᴏʀ Mᴏʀᴇ Iɴꜰᴏ...
+Pᴏᴡᴇʀᴇᴅ ʙʏ : @AIOM_BOTS""",
             reply_markup=InlineKeyboardMarkup(
             [
                 [
