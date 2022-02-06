@@ -46,9 +46,9 @@ async def start(bot, update):
             [
                 [
                     InlineKeyboardButton("Help", callback_data="help"),
-                    InlineKeyboardButton("About", callback_data="donate"),
+                    InlineKeyboardButton("About", callback_data="about"),
                 ],
-                [   InlineKeyboardButton("Close", callback_data="close")],
+                [   InlineKeyboardButton("Close", callback_data="start")],
             ]
         ),
         reply_to_message_id=update.message_id
