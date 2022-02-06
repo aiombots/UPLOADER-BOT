@@ -28,7 +28,14 @@ async def button(bot, update):
 async def callback(bot, update):
           await update.message.edit(
               text="working"
-          )       
+          )
+
+@Clinton.on_callback_query(filters.regex('^help$'))
+async def callback(bot, update):
+          await update.message.edit(
+              text="working"
+          ) 
+     
                  
 
 
