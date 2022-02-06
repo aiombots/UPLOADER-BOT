@@ -28,6 +28,16 @@ async def help_user(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.HELP_USER,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url="https://t.me/AIOM_BOTS"),
+                    InlineKeyboardButton("Gʀᴏᴜᴘ", url="https://t.me/AIOM_BOTS_GROUP"),
+                ],
+                [   InlineKeyboardButton("Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/aiombots/UPLOADER-BOT")],
+            ]
+        ),
+        reply_to_message_id=update.message_id,
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
@@ -44,10 +54,10 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
-                    InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
+                    InlineKeyboardButton("Cʜᴀɴɴᴇʟ", url="https://t.me/AIOM_BOTS"),
+                    InlineKeyboardButton("Gʀᴏᴜᴘ", url="https://t.me/AIOM_BOTS_GROUP"),
                 ],
-                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
+                [   InlineKeyboardButton("Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/aiombots/UPLOADER-BOT")],
             ]
         ),
         reply_to_message_id=update.message_id
