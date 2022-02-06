@@ -8,7 +8,7 @@ from plugins.youtube_dl_button import youtube_dl_call_back
 from plugins.dl_button import ddl_call_back
 from translation import Translation
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from plugins.help_text import update
+from plugins.help_text import Translation
 
 @Clinton.on_callback_query()
 async def callback(bot, msg):
