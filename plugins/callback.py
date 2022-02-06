@@ -20,7 +20,7 @@ async def callback(bot, msg):
                     InlineKeyboardButton("Hᴇʟᴘ", callback_data="start"),
                     InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
                 ],
-                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
+                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")],
             ]
         )
         )
@@ -33,7 +33,7 @@ async def callback(bot, msg):
                     InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
                     InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
                 ],
-                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
+                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")],
             ]
         )
         )
@@ -44,9 +44,9 @@ async def callback(bot, msg):
             [
                 [
                     InlineKeyboardButton("Hᴏᴍᴇ", callback_data="help"),
-                    InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about"),
+                    InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
                 ],
-                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="start")],
+                [   InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")],
             ]
         )
         )
