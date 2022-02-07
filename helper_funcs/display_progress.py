@@ -50,7 +50,7 @@ async def progress_for_pyrogram(
 ├⚡Sᴘᴇᴇᴅ : {2}/s
 │
 ├⏱️ Eᴛᴀ : {3}
-╰─[{0}{1}]─────⍟""".format(
+╰───────────⍟""".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
