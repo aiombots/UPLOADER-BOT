@@ -9,8 +9,7 @@ Cʟɪᴄᴋ Oɴ /help Cᴏᴍᴍᴀɴᴅ Fᴏʀ Mᴏʀᴇ Iɴꜰᴏ...
 
 Pᴏᴡᴇʀᴇᴅ Bʏ : @AIOM_BOTS"""
     FORMAT_SELECTION = "Sᴇʟᴇᴄᴛ Tʜᴇ Dᴇsɪʀᴇᴅ Fᴏʀᴍᴀᴛ"
-    SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
-URL | filename | username | password"""
+    SET_CUSTOM_USERNAME_PASSWORD = ""
     DOWNLOAD_START = "Dᴏᴡɴʟᴏᴀᴅɪɴɢ..."
     UPLOAD_START = "Uᴘʟᴏᴀᴅɪɴɢ..."
     RCHD_TG_API_LIMIT = """Dᴏᴡɴʟᴏᴀᴅᴇᴅ Iɴ {} Sᴇᴄᴏɴᴅs
