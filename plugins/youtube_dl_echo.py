@@ -27,7 +27,7 @@ from pyrogram.errors import UserNotParticipant
 @Clinton.on_message(filters.private & ~filters.via_bot & filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
     await AddUser(bot, update)
-    imog = await update.reply_text("Processing...⚡", reply_to_message_id=update.message_id)
+    imog = await update.reply_text("Pʀᴏᴄᴇssɪɴɢ....", reply_to_message_id=update.message_id)
     youtube_dl_username = None
     youtube_dl_password = None
     file_name = None
@@ -154,6 +154,7 @@ async def echo(bot, update):
                             "S " + format_string + " video " + approx_file_size + " ",
                             callback_data=(cb_string_video).encode("UTF-8")
                         ),
+                     ],[
                         InlineKeyboardButton(
                             "D " + format_ext + " " + approx_file_size + " ",
                             callback_data=(cb_string_file).encode("UTF-8")
@@ -178,6 +179,7 @@ async def echo(bot, update):
                             approx_file_size + " )",
                             callback_data=(cb_string_video).encode("UTF-8")
                         ),
+                    ],[
                         InlineKeyboardButton(
                             "DFile [" +
                             "] ( " +
