@@ -154,7 +154,6 @@ async def echo(bot, update):
                             "S " + format_string + " video " + approx_file_size + " ",
                             callback_data=(cb_string_video).encode("UTF-8")
                         ),
-                     ],[
                         InlineKeyboardButton(
                             "D " + format_ext + " " + approx_file_size + " ",
                             callback_data=(cb_string_file).encode("UTF-8")
@@ -179,7 +178,6 @@ async def echo(bot, update):
                             approx_file_size + " )",
                             callback_data=(cb_string_video).encode("UTF-8")
                         ),
-                    ],[
                         InlineKeyboardButton(
                             "DFile [" +
                             "] ( " +
@@ -237,7 +235,7 @@ async def echo(bot, update):
         await imog.delete(True)
         await bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.FORMAT_SELECTION,
+            text=Translation.FORMAT_SELECTION + "\n" + Translation.SET_CUSTOM_USERNAME_PASSWORD,
             reply_markup=reply_markup,
             parse_mode="html",
             reply_to_message_id=update.message_id
